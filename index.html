@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wasetrox - Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lobster&family=Pacifico&family=Nunito:wght@400;600&family=Slabo+27px&family=Arvo:wght@400;700&family=Playfair+Display&family=Quicksand:wght@400;600&family=Zilla+Slab&family=Merriweather:wght@300;400&family=Oxygen:wght@300;400&family=Anton&family=Source+Sans+Pro:wght@400;600&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .profile-card {
+      background: rgba(31, 31, 31, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+    .profile-img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin: 0 auto 10px;
+    }
+    .username {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .status {
+      font-size: 16px;
+      color: #555;
+    }
+    .activity {
+      background-color: rgba(31, 31, 31, 0.8);
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .activity h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .activity ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .activity ul li {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #ddd;
+      display: flex;
+      align-items: flex-start;
+    }
+    .activity ul li i {
+      color: #f39c12;
+      margin-right: 8px;
+    }
+    .activity ul li img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    .activity ul li span {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
+      display: block;
+    }
+    .activity ul li .activity-description {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #aaa;
+    }
+    .info-box {
+      margin-top: 20px;
+    }
+    .info-box h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .info-box ul li {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Projeler kısmı */
+    .projects-info-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .projects-info-box ul li {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .projects-info-box ul li i {
+      margin-right: 15px;
+      font-size: 24px;
+      color: #f39c12;
+    }
+    .projects-info-box ul li .project-description {
+      font-size: 14px;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    /* Yetenekler ve projeler stilini benzer yap */
+    .info-box ul li {
+      font-size: 16px;
+      color: #555;
+      display: flex;
+      align-items: center;
+    }
+    .info-box ul li i {
+      margin-right: 15px;
+      font-size: 24px;
+      color: #f39c12;
+    }
+  </style>
+</head>
+<body class="theme-1 font-1">
+
+  <div class="parallax"></div>
+  <div class="container">
+    <div class="profile-card">
+      <!-- Dinamik profil resmi -->
+      <div class="profile-img-container">
+        <img id="profile-img" class="profile-img" alt="Profil Resmi">
+      </div>
+      <h1 id="username">Kullanıcı Adı Yükleniyor...</h1>
+      <p class="bio">Ben Wasetrox ve sosyal medya hesaplarım aşağıda bulunmakta. İletişime geçmek için her zaman açığım!</p>
+      <div class="social-links">
+        <a href="https://youtube.com/@Wasetrox" class="social-btn youtube" target="_blank">
+          <i class="fab fa-youtube"></i> Youtube
+        </a>
+        <a href="https://github.com/wasetrox" class="social-btn github" target="_blank">
+          <i class="fab fa-github"></i> Github
+        </a>
+        <a href="https://discord.gg/novadev" class="social-btn discord" target="_blank">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+      </div>
+    </div>
+
+    <div class="info-sections">
+      <div class="info-box">
+        <h2>Yeteneklerim</h2>
+        <ul class="skills-list">
+          <li><i class="fas fa-code"></i> HTML5</li>
+          <li><i class="fas fa-paint-brush"></i> CSS3</li>
+          <li><i class="fab fa-js"></i> JavaScript</li>
+          <li><i class="fab fa-react"></i> React</li>
+          <li><i class="fab fa-node"></i> Node.js</li>               
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Projelerim</h2>
+        <ul class="projects-list">
+          <li>
+            <i class="fas fa-laptop-code"></i> Web Sitesi Tasarımı
+            <div class="project-description">Responsive ve kullanıcı dostu web siteleri tasarlıyorum.</div>
+          </li>
+          <li>
+            <i class="fas fa-mobile-alt"></i> Mobil Uygulama
+            <div class="project-description">Android ve iOS için mobil uygulama geliştirmekteyim.</div>
+          </li>
+          <li>
+            <i class="fas fa-gamepad"></i> Oyun Geliştirme
+            <div class="project-description">Bağımsız oyunlar geliştiriyor ve oyun dünyasında yer alıyorum.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Wasetrox. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    // Discord kullanıcı ID'nizi buraya yazın
+    const DISCORD_ID = '312062402273345537'; // Discord ID
+
+    // Profil bilgilerini güncelle
+    const profileImg = document.getElementById('profile-img');
+    const usernameDiv = document.getElementById('username');
+    const statusDiv = document.getElementById('status');
+    const activitiesList = document.getElementById('activities');
+
+    // Lanyard API'den veri çek
+    fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          const discordData = data.data;
+
+          // Profil resmi
+          const avatarUrl = `https://cdn.discordapp.com/avatars/${DISCORD_ID}/${discordData.discord_user.avatar}.png?size=512`;
+          profileImg.src = avatarUrl;
+
+          // Kullanıcı adı
+          usernameDiv.textContent = discordData.discord_user.username;
+
+          // Etkinlikler
+          const activities = discordData.activities.map(activity => {
+            const activityName = activity.name || "Bilgi Yok";
+            const activityImage = activity.assets ? `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png` : 'https://example.com/placeholder.png';
+            return `  
+              <li>
+                <img src="${activityImage}" alt="${activityName}">
+                <span>${activityName}</span>
+                <p class="activity-description">${activity.details || "Açıklama Yok"}</p>
+              </li>
+            `;
+          }).join('');
+        }
+      });
+  </script>
+</body>
+</html>
